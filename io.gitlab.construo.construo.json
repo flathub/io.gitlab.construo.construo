@@ -16,8 +16,7 @@
             "name": "jsoncpp",
             "buildsystem": "cmake-ninja",
             "config-opts": [
-                "-DCMAKE_BUILD_TYPE=Release",
-                "-DCMAKE_INSTALL_PREFIX:PATH=/app"
+                "-DCMAKE_BUILD_TYPE=Release"
             ],
             "sources": [
                 {
@@ -42,7 +41,7 @@
                 }
             ],
             "buildsystem": "cmake-ninja",
-            "builddir": "true",
+            "builddir": true,
             "config-opts": [
                 "-DCMAKE_BUILD_TYPE=Release",
                 "-DBUILD_SHARED_LIBS=ON",
@@ -61,8 +60,7 @@
             "name": "construo",
             "buildsystem": "cmake-ninja",
             "config-opts": [
-                "-DCMAKE_BUILD_TYPE=Release",
-                "-DCMAKE_INSTALL_PREFIX:PATH=/app"
+                "-DCMAKE_BUILD_TYPE=Release"
             ],
             "sources": [
                 {
