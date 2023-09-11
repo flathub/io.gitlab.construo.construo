@@ -68,6 +68,10 @@
                     "type": "git",
                     "url": "https://gitlab.com/construo/construo.git",
                     "commit": "d627f04705477f2f3ddf6637c9a4e60b702766cd"
+                },
+                {
+                    "type": "patch",
+                    "path": "build-fix.patch"
                 }
             ]
         }
