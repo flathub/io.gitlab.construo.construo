@@ -1,22 +1,23 @@
 {
     "app-id": "io.gitlab.construo.construo",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "20.08",
+    "runtime-version": "23.08",
     "sdk": "org.freedesktop.Sdk",
+    "command": "construo.x11",
     "rename-icon": "construo",
     "rename-desktop-file": "construo.x11.desktop",
     "rename-appdata-file": "construo.appdata.xml",
     "finish-args": [
         "--share=ipc",
-        "--socket=x11"
+        "--socket=x11",
+        "--device=dri"
     ],
     "modules": [
         {
             "name": "jsoncpp",
             "buildsystem": "cmake-ninja",
             "config-opts": [
-                "-DCMAKE_BUILD_TYPE=Release",
-                "-DCMAKE_INSTALL_PREFIX:PATH=/app"
+                "-DCMAKE_BUILD_TYPE=Release"
             ],
             "sources": [
                 {
@@ -41,7 +42,7 @@
                 }
             ],
             "buildsystem": "cmake-ninja",
-            "builddir": "true",
+            "builddir": true,
             "config-opts": [
                 "-DCMAKE_BUILD_TYPE=Release",
                 "-DBUILD_SHARED_LIBS=ON",
@@ -60,14 +61,17 @@
             "name": "construo",
             "buildsystem": "cmake-ninja",
             "config-opts": [
-                "-DCMAKE_BUILD_TYPE=Release",
-                "-DCMAKE_INSTALL_PREFIX:PATH=/app"
+                "-DCMAKE_BUILD_TYPE=Release"
             ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://gitlab.com/construo/construo.git",
                     "commit": "d627f04705477f2f3ddf6637c9a4e60b702766cd"
+                },
+                {
+                    "type": "patch",
+                    "path": "build-fix.patch"
                 }
             ]
         }

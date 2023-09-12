@@ -1,0 +1,13 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index ea94301..658294f 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -217,7 +217,7 @@ set_target_properties(libconstruo PROPERTIES
+   CXX_STANDARD_REQUIRED ON
+   CXX_EXTENSIONS OFF)
+ set_target_properties(libconstruo PROPERTIES OUTPUT_NAME construo)
+-target_compile_options(libconstruo PRIVATE -std=c++11)
++# target_compile_options(libconstruo PRIVATE -std=c++11)
+ target_link_libraries(libconstruo PUBLIC prio)
+
+ if(GLUT_FOUND AND OPENGL_FOUND)
